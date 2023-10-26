@@ -13,12 +13,12 @@ struct node *insert(struct node *head, int data) {
 }
 
 void insert_tail(struct BigInteger *num, int element) {
-  struct node *temp = (struct node *)malloc(sizeof(struct node));
-  if (temp == NULL) {
+  struct node *x = (struct node *)malloc(sizeof(struct node));
+  if (x == NULL) {
     return;
   }
-  temp->data = element;
-  temp->next = NULL;
+  x->data = element;
+  x->next = NULL;
   num->length += 1;
   if (num->head == NULL) {
     num->head = temp;
