@@ -5,7 +5,6 @@
 struct node *insert(struct node *head, int data) {
   struct node *temp = (struct node *)malloc(sizeof(struct node));
   if (!temp) {
-    printf("Memory Not Allocated!");
     exit(1);
   }
   temp->data = data;
@@ -16,7 +15,6 @@ struct node *insert(struct node *head, int data) {
 void insert_tail(struct BigInteger *num, int element) {
   struct node *temp = (struct node *)malloc(sizeof(struct node));
   if (temp == NULL) {
-    printf("Memory allocation failed\n");
     return;
   }
   temp->data = element;
@@ -300,7 +298,6 @@ struct BigInteger mod(struct BigInteger a, struct BigInteger b) {
   char sig = '+';
   int flag = 0;
   if (b.length == 1 && b.head->data == 0) {
-    printf("Error! Division by zero");
     return num1;
   }
   if (a.sign != b.sign)
